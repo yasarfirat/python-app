@@ -107,7 +107,7 @@ $configureMaster = <<-SCRIPT
 
     kubectl apply -f https://raw.githubusercontent.com/yasarfirat/python-app/master/mysql-pv.yaml
     kubectl apply -f https://raw.githubusercontent.com/yasarfirat/python-app/master/mysql-deployment.yaml
-    kubectl apply -f https://raw.githubusercontent.com/yasarfirat/python-app/master/pythonapp.yaml
+    kubectl apply -f https://raw.githubusercontent.com/yasarfirat/python-app/master/pythonapp-deployment.yaml
 
 SCRIPT
 
