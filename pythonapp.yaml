@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pythonapp
+spec:
+  selector:
+    matchLabels:
+      app: pythonapp
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: pythonapp
+    spec:
+      containers:
+      - image: firat.azurecr.io/frt-python-app:latest
+        name: pythonapp
+        env:
+          # Use secret in real usage
+        - name: MYSQL_PASSWORD
+          value: "Passw0rd1"
+        - name: MYSQL_USERNAME
+          value: "root"
+        - name: MYSQL_DB
+          value: "frtdb"
+        - name: MYSQL_HOST
+          value: "mysqlsvc"
+        - name: MYSQL_PORT
+          value: "3306"
+        ports:
+        - containerPort: 3000
+          name: pythonapp
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: appsvc
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 3000
+    nodePort: 30080
+  selector:
+    app: pythonapp
+  type: NodePort
