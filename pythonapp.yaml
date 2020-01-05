@@ -14,7 +14,7 @@ spec:
         app: pythonapp
     spec:
       containers:
-      - image: firat.azurecr.io/frt-python-app:latest
+      - image: firatyasar/python-app:latest
         name: pythonapp
         env:
           # Use secret in real usage
