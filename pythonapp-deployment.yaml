@@ -19,15 +19,26 @@ spec:
         env:
           # Use secret in real usage
         - name: MYSQL_PASSWORD
-          value: "Passw0rd1"
+          valueFrom:
+           secretKeyRef:
+            name: mysqlsecret
+            key: mysql_password
         - name: MYSQL_USERNAME
-          value: "root"
+          secretKeyRef:
+            name: mysqlsecret
+            key: mysql_username
         - name: MYSQL_DB
-          value: "frtdb"
+          secretKeyRef:
+            name: mysqlsecret
+            key: mysql_db
         - name: MYSQL_HOST
-          value: "mysqlsvc"
+          secretKeyRef:
+            name: mysqlsecret
+            key: mysql_db
         - name: MYSQL_PORT
-          value: "3306"
+          secretKeyRef:
+            name: mysqlsecret
+            key: mysql_port
         ports:
         - containerPort: 3000
           name: pythonapp
