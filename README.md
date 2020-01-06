@@ -5,6 +5,7 @@ You can configure a Flask app an mysql database as containerize on K8S cluster u
 I dockerized flesk app with alpine:3.7 base image. You can find dockerfile in PythonApp folder.
 I also added two deployment yaml both mysql and flask application. I also added necessary service definition on these yaml files.
 I genereted a secret for mysql requirements. this secret has been used on yaml files as secret key reference.
+I used weave network plugin for cni.
 
 Requirements:
 
