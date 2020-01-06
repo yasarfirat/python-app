@@ -24,19 +24,23 @@ spec:
             name: mysqlsecret
             key: mysql_password
         - name: MYSQL_USERNAME
-          secretKeyRef:
+          valueFrom:
+           secretKeyRef:
             name: mysqlsecret
             key: mysql_username
         - name: MYSQL_DB
-          secretKeyRef:
+          valueFrom:
+           secretKeyRef:
             name: mysqlsecret
             key: mysql_db
         - name: MYSQL_HOST
-          secretKeyRef:
+          valueFrom:
+           secretKeyRef:
             name: mysqlsecret
             key: mysql_db
         - name: MYSQL_PORT
-          secretKeyRef:
+          valueFrom: 
+           secretKeyRef:
             name: mysqlsecret
             key: mysql_port
         ports:
