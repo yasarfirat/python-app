@@ -1,4 +1,4 @@
-# python-app
+# Flask-app with mysql
 
 Info:
 
