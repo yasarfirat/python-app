@@ -18,3 +18,6 @@ Quick Start:
 1. Clone this repo.
 2. Boot up your vagrant environment.
 
+![Nodes](https://github.com/yasarfirat/python-app/blob/master/Pics/Nodes.jpg)
+![Deployments](https://github.com/yasarfirat/python-app/blob/master/Pics/deployments.jpg)
+![Application](https://github.com/yasarfirat/python-app/blob/master/Pics/application.jpg)
