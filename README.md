@@ -7,6 +7,7 @@ I dockerized flesk app with alpine:3.7 base image. You can find dockerfile in Py
 I also added two deployment yaml both mysql and flask application. I also added necessary service definition on these yaml files.
 I genereted a secret for mysql requirements. This secret has been used on yaml files as secret key reference.
 And I used weave network plugin for cni.
+Last but not least I created persistent volume and persistent volume claim to make mysql data persistent.
 
 Requirements:
 
