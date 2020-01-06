@@ -37,7 +37,7 @@ spec:
           valueFrom:
            secretKeyRef:
             name: mysqlsecret
-            key: mysql_db
+            key: mysql_host
         - name: MYSQL_PORT
           valueFrom: 
            secretKeyRef:
