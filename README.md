@@ -19,10 +19,13 @@ Quick Start:
 2. Boot up your vagrant environment.
 
 Nodes: 
+
 ![Nodes](https://github.com/yasarfirat/python-app/blob/master/Pics/Nodes.jpg)
 
 Deployments:
+
 ![Deployments](https://github.com/yasarfirat/python-app/blob/master/Pics/deployments.jpg)
 
 Application:
+
 ![Application](https://github.com/yasarfirat/python-app/blob/master/Pics/application.jpg)
