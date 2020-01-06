@@ -33,13 +33,21 @@ spec:
         env:
           # Use secret in real usage
         - name: MYSQL_ROOT_PASSWORD
-          value: Passw0rd1
+          secretKeyRef:
+            name: mysqlsecret
+            key: mysql_root_password
         - name: MYSQL_USER
-          value: firat
+          secretKeyRef:
+            name: mysqlsecret
+            key: mysql_username
         - name: MYSQL_PASSWORD
-          value: Passw0rd1
+          secretKeyRef:
+            name: mysqlsecret
+            key: mysql_password
         - name: MYSQL_DATABASE
-          value: frtdb
+          secretKeyRef:
+            name: mysqlsecret
+            key: mysql_db
         ports:
         - containerPort: 3306
           name: mysql
